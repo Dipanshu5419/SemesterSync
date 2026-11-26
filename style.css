@@ -1537,3 +1537,73 @@ body[data-theme="light"] input::placeholder {
     color: white;
     transform: translateY(-2px);
 }
+
+
+/* ===== FINAL MOBILE LAYOUT FIX ===== */
+
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative !important;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        padding: 20px;
+    }
+
+    .sidebar nav {
+        margin-top: 20px;
+        flex: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subjects-grid,
+    .notes-grid,
+    .flashcards-grid,
+    .planner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overall-card .progress-ring {
+        width: 110px !important;
+        height: 110px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .intro {
+        padding: 22px;
+    }
+
+    .tracker-subject,
+    .planner-card,
+    .note-card,
+    .flashcard {
+        padding: 18px;
+    }
+}
