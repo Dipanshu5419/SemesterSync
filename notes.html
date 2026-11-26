@@ -11,12 +11,25 @@
 
 <body>
 
-    <aside class="sidebar">
+    
+<!-- SIDEBAR -->
+<aside class="sidebar">
 
+    <div class="mobile-header">
         <div class="logo">
             <h2>SEMESTER<span>SYNC.</span></h2>
             <p>ACADEMIC TRACKER</p>
         </div>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+    </div>
+
+    <div class="sidebar-content" id="sidebarContent">
 
         <nav>
             <ul>
@@ -29,24 +42,30 @@
             </ul>
         </nav>
 
+        <div class="theme-switcher">
+            <span class="theme-icon">◐</span>
+            <span class="theme-label">Theme</span>
 
-<div class="theme-switcher">
-    <span class="theme-icon">◐</span>
-    <span class="theme-label">Theme</span>
+            <div class="theme-options">
+                <button class="theme-btn active" data-theme="current"
+                    title="Current theme" aria-label="Current theme"></button>
 
-    <div class="theme-options">
-        <button class="theme-btn active" data-theme="current" title="Current theme" aria-label="Current theme"></button>
-        <button class="theme-btn" data-theme="dark" title="Dark theme" aria-label="Dark theme"></button>
-        <button class="theme-btn" data-theme="light" title="Light theme" aria-label="Light theme"></button>
-    </div>
-</div>
+                <button class="theme-btn" data-theme="dark"
+                    title="Dark theme" aria-label="Dark theme"></button>
+
+                <button class="theme-btn" data-theme="light"
+                    title="Light theme" aria-label="Light theme"></button>
+            </div>
+        </div>
 
         <div class="sidebar-footer">
             <p>SEMESTER 01</p>
             <p>Academic Year 2026-27</p>
         </div>
 
-    </aside>
+    </div>
+</aside>
+
 
     <main class="main-content">
 

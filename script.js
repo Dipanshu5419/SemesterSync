@@ -316,3 +316,25 @@ document.querySelectorAll(".tracker-subject").forEach(subject => {
 
     updateCount();
 });
+
+
+/* MOBILE MENU TOGGLE */
+
+const menuToggle = document.getElementById("menuToggle");
+const sidebarContent = document.getElementById("sidebarContent");
+
+if (menuToggle && sidebarContent) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = sidebarContent.classList.toggle("open");
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+        menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+}
+document.querySelectorAll(".sidebar-content nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        sidebarContent.classList.remove("open");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});
