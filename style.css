@@ -1607,3 +1607,18 @@ body[data-theme="light"] input::placeholder {
         padding: 18px;
     }
 }
+
+@media (max-width: 768px) {
+    .sidebar {
+        height: auto !important;
+        min-height: 0 !important;
+        position: relative !important;
+    }
+
+    .main-content {
+        display: block !important;
+        position: relative;
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
