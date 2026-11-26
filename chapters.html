@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Tracker | SemesterSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>SEMESTER<span>SYNC.</span></h2>
+            <p>ACADEMIC TRACKER</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="subjects.html">My Subjects</a></li>
+                <li><a href="chapters.html" class="active">Chapter Tracker</a></li>
+                <li><a href="notes.html">Notes Library</a></li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="planner.html">Study Planner</a></li>
+            </ul>
+        </nav>
+
+
+<div class="theme-switcher">
+    <span class="theme-icon">◐</span>
+    <span class="theme-label">Theme</span>
+
+    <div class="theme-options">
+        <button class="theme-btn active" data-theme="current" title="Current theme" aria-label="Current theme"></button>
+        <button class="theme-btn" data-theme="dark" title="Dark theme" aria-label="Dark theme"></button>
+        <button class="theme-btn" data-theme="light" title="Light theme" aria-label="Light theme"></button>
+    </div>
+</div>
+
+        <div class="sidebar-footer">
+            <p>SEMESTER 01</p>
+            <p>Academic Year 2026-27</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome-text">YOUR ACADEMIC COMMAND CENTRE</p>
+                <h1>Chapter Tracker</h1>
+            </div>
+
+            <div class="profile">Semester 01</div>
+        </header>
+
+        <!-- CHAPTER TRACKER -->
+<section id="chapters" class="content-section">
+
+    <div class="section-heading">
+        <h2>Chapter Tracker</h2>
+        <p>Track your syllabus unit by unit.</p>
+    </div>
+
+    <!-- WEB DESIGNING -->
+    <div class="tracker-subject" data-subject="web">
+    <h3>01. Web Designing</h3>
+        <details>
+            <summary>Module 1 – Introduction to HTML & CSS</summary>
+            <label><input type="checkbox"> HTML Introduction and Structure</label>
+            <label><input type="checkbox"> HTML Tags and Attributes</label>
+            <label><input type="checkbox"> Links, Images and Tables</label>
+            <label><input type="checkbox"> Introduction to CSS</label>
+        </details>
+
+        <details>
+            <summary>Module 2 – HTML Elements & Forms</summary>
+            <label><input type="checkbox"> HTML Lists and Tables</label>
+            <label><input type="checkbox"> HTML Forms and Input Fields</label>
+            <label><input type="checkbox"> Semantic Elements</label>
+            <label><input type="checkbox"> Multimedia Elements</label>
+        </details>
+
+        <details>
+            <summary>Module 3 – CSS Basics & Styling</summary>
+            <label><input type="checkbox"> CSS Selectors</label>
+            <label><input type="checkbox"> CSS Box Model</label>
+            <label><input type="checkbox"> Display and Positioning</label>
+            <label><input type="checkbox"> Flexbox and Grid</label>
+        </details>
+
+        <details>
+            <summary>Module 4 – Responsive Web Design</summary>
+            <label><input type="checkbox"> Responsive Design</label>
+            <label><input type="checkbox"> Media Queries</label>
+            <label><input type="checkbox"> Transitions and Animations</label>
+            <label><input type="checkbox"> CSS Variables and Effects</label>
+        </details>
+
+        <details>
+            <summary>Module 5 – Web Deployment</summary>
+            <label><input type="checkbox"> Web Hosting</label>
+            <label><input type="checkbox"> Domain Names and DNS</label>
+            <label><input type="checkbox"> GitHub Pages and Netlify</label>
+            <label><input type="checkbox"> SEO and Version Control</label>
+        </details>
+    </div>
+
+
+    <!-- PROGRAMMING -->
+    <div class="tracker-subject" data-subject="programming">
+    <h3>02. Programming for Problem Solving</h3>
+        <details>
+            <summary>Unit 1 – Introduction to C Programming</summary>
+            <label><input type="checkbox"> Introduction to C</label>
+            <label><input type="checkbox"> Basic Structure of C Program</label>
+        </details>
+
+        <details>
+            <summary>Unit 2 – Constants, Variables and Operators</summary>
+            <label><input type="checkbox"> Constants and Variables</label>
+            <label><input type="checkbox"> Data Types</label>
+            <label><input type="checkbox"> Operators and Expressions</label>
+        </details>
+
+        <details>
+            <summary>Unit 3 – Control Structures</summary>
+            <label><input type="checkbox"> Conditional Statements</label>
+            <label><input type="checkbox"> Loops</label>
+            <label><input type="checkbox"> Jump Statements</label>
+        </details>
+
+        <details>
+            <summary>Unit 4 – Arrays and Strings</summary>
+            <label><input type="checkbox"> One-Dimensional Arrays</label>
+            <label><input type="checkbox"> Multidimensional Arrays</label>
+            <label><input type="checkbox"> Strings</label>
+        </details>
+
+        <details>
+            <summary>Unit 5 – Functions, Structures and Unions</summary>
+            <label><input type="checkbox"> User-Defined Functions</label>
+            <label><input type="checkbox"> Structures</label>
+            <label><input type="checkbox"> Unions</label>
+        </details>
+
+        <details>
+            <summary>Unit 6 – Pointers and File Management</summary>
+            <label><input type="checkbox"> Pointers</label>
+            <label><input type="checkbox"> Dynamic Memory Allocation</label>
+            <label><input type="checkbox"> File Management</label>
+        </details>
+    </div>
+
+
+    <!-- PROMPT ENGINEERING -->
+    <div class="tracker-subject" data-subject="ai">
+    <h3>03. Prompt Engineering and Generative AI</h3>
+        <details>
+            <summary>Module 1 – Introduction to LLM and Prompt Engineering</summary>
+            <label><input type="checkbox"> Introduction to AI and Generative AI</label>
+            <label><input type="checkbox"> Machine Learning and Deep Learning</label>
+            <label><input type="checkbox"> History of LLMs</label>
+            <label><input type="checkbox"> Applications of Prompt Engineering</label>
+            <label><input type="checkbox"> Exploring Different LLMs</label>
+        </details>
+
+        <details>
+            <summary>Module 2 – Fundamentals of Prompt Writing</summary>
+            <label><input type="checkbox"> Structure of a Prompt</label>
+            <label><input type="checkbox"> Types of Prompts</label>
+            <label><input type="checkbox"> Prompt Templates</label>
+            <label><input type="checkbox"> Writing Effective Prompts</label>
+        </details>
+
+        <details>
+            <summary>Module 3 – Prompt Engineering Techniques</summary>
+            <label><input type="checkbox"> Zero-shot, One-shot and Few-shot</label>
+            <label><input type="checkbox"> Step-by-Step Prompting</label>
+            <label><input type="checkbox"> Self-Reflection and Role-Based Prompting</label>
+            <label><input type="checkbox"> Output Control and Prompt Optimization</label>
+        </details>
+
+        <details>
+            <summary>Module 4 – Advanced Prompt Engineering</summary>
+            <label><input type="checkbox"> Prompt Chaining</label>
+            <label><input type="checkbox"> ReAct Technique</label>
+            <label><input type="checkbox"> Iterative Refinement</label>
+            <label><input type="checkbox"> Prompt Decomposition</label>
+        </details>
+
+        <details>
+            <summary>Module 5 – AI Productivity Tools and Multimodal Prompting</summary>
+            <label><input type="checkbox"> Text and Image AI</label>
+            <label><input type="checkbox"> Presentation and Document AI</label>
+            <label><input type="checkbox"> Spreadsheet and Video AI</label>
+            <label><input type="checkbox"> Speech AI and Multimodal Prompting</label>
+        </details>
+
+        <details>
+            <summary>Module 6 – Mini Project and Demonstration</summary>
+            <label><input type="checkbox"> Website Creation</label>
+            <label><input type="checkbox"> AI Model Creation</label>
+            <label><input type="checkbox"> Project Demonstration</label>
+        </details>
+    </div>
+
+
+    <!-- CALCULUS -->
+    <div class="tracker-subject" data-subject="calculus">
+    <h3>04. Calculus</h3>
+        <details>
+            <summary>Unit 1 – Application of Functions of One Variable</summary>
+            <label><input type="checkbox"> Functions, Limits and Continuity</label>
+            <label><input type="checkbox"> Differentiability</label>
+            <label><input type="checkbox"> Mean Value Theorems</label>
+            <label><input type="checkbox"> Riemann Integration</label>
+            <label><input type="checkbox"> Applications of Integration</label>
+        </details>
+
+        <details>
+            <summary>Unit 2 – Multivariate Calculus</summary>
+            <label><input type="checkbox"> Functions of Several Variables</label>
+            <label><input type="checkbox"> Partial Derivatives</label>
+            <label><input type="checkbox"> Chain Rule and Implicit Functions</label>
+            <label><input type="checkbox"> Euler's Theorem and Taylor's Expansion</label>
+            <label><input type="checkbox"> Jacobian</label>
+            <label><input type="checkbox"> Maxima, Minima and Lagrange Multipliers</label>
+        </details>
+
+        <details>
+            <summary>Unit 3 – Multiple Integration</summary>
+            <label><input type="checkbox"> Double Integration</label>
+            <label><input type="checkbox"> Change of Order</label>
+            <label><input type="checkbox"> Change into Polar Form</label>
+            <label><input type="checkbox"> Applications to Area and Volume</label>
+        </details>
+
+        <details>
+            <summary>Unit 4 – Vector Calculus</summary>
+            <label><input type="checkbox"> Vector-Valued Functions</label>
+            <label><input type="checkbox"> Gradient and Directional Derivatives</label>
+            <label><input type="checkbox"> Divergence and Curl</label>
+            <label><input type="checkbox"> Line and Surface Integrals</label>
+            <label><input type="checkbox"> Green's, Gauss and Stokes' Theorems</label>
+        </details>
+    </div>
+
+
+    <!-- ELECTRICAL AND ELECTRONICS -->
+    <div class="tracker-subject" data-subject="electrical">
+    <h3>05. Electrical and Electronics Engineering</h3> 
+        <details>
+            <summary>Unit 1 – DC Circuits</summary>
+            <label><input type="checkbox"> DC Circuit Fundamentals</label>
+        </details>
+
+        <details>
+            <summary>Unit 2 – AC Circuits</summary>
+            <label><input type="checkbox"> AC Circuit Fundamentals</label>
+        </details>
+
+        <details>
+            <summary>Unit 3 – Diodes and Transistors</summary>
+            <label><input type="checkbox"> Diodes</label>
+            <label><input type="checkbox"> Transistors</label>
+        </details>
+
+        <details>
+            <summary>Unit 4 – Voltage Regulators</summary>
+            <label><input type="checkbox"> Voltage Regulators</label>
+        </details>
+    </div>
+
+</section>
+
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>

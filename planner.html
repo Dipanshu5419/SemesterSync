@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner | SemesterSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="logo">
+        <h2>SEMESTER<span>SYNC.</span></h2>
+        <p>ACADEMIC TRACKER</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="subjects.html">My Subjects</a></li>
+            <li><a href="chapters.html">Chapter Tracker</a></li>
+            <li><a href="notes.html">Notes Library</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="planner.html" class="active">Study Planner</a></li>
+        </ul>
+    </nav>
+
+    <div class="theme-switcher">
+        <span class="theme-icon">◐</span>
+        <span class="theme-label">Theme</span>
+        <div class="theme-options">
+            <button class="theme-btn active" data-theme="current" title="Current theme" aria-label="Current theme"></button>
+            <button class="theme-btn" data-theme="dark" title="Dark theme" aria-label="Dark theme"></button>
+            <button class="theme-btn" data-theme="light" title="Light theme" aria-label="Light theme"></button>
+        </div>
+    </div>
+
+    <div class="sidebar-footer">
+        <p>SEMESTER 01</p>
+        <p>Academic Year 2026-27</p>
+    </div>
+</aside>
+
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <p class="welcome-text">YOUR ACADEMIC COMMAND CENTRE</p>
+            <h1>Study Planner</h1>
+        </div>
+        <div class="profile">Semester 01</div>
+    </header>
+
+    <section id="planner" class="content-section">
+
+        <div class="section-heading">
+            <h2>Plan Your Week</h2>
+            <p>Choose a ready-made schedule or create your own.</p>
+        </div>
+
+        <div class="planner-card" style="margin-bottom:25px;">
+            <h3>Choose Your Plan</h3>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:15px;">
+                <button id="readyPlanBtn" class="theme-btn" style="padding:10px 18px; width:auto;">
+                    Ready-made Plan
+                </button>
+
+                <button id="customPlanBtn" class="theme-btn" style="padding:10px 18px; width:auto;">
+                    Customise My Plan
+                </button>
+            </div>
+
+            <p id="planMessage" style="margin-top:14px;">
+                You're viewing the original recommended schedule.
+            </p>
+        </div>
+
+        <div class="planner-grid">
+
+            <div class="planner-card">
+                <h3>Weekly Study Schedule</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Subject</th>
+                            <th>Activity</th>
+                            <th class="custom-only" hidden>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleBody">
+                        <tr><td>Monday</td><td>Calculus</td><td>Practice</td></tr>
+                        <tr><td>Tuesday</td><td>Programming</td><td>Coding</td></tr>
+                        <tr><td>Wednesday</td><td>Web Designing</td><td>Revision</td></tr>
+                        <tr><td>Thursday</td><td>Generative AI</td><td>Learning</td></tr>
+                        <tr><td>Friday</td><td>Electrical</td><td>Practice</td></tr>
+                        <tr><td>Saturday</td><td>All Subjects</td><td>Revision</td></tr>
+                    </tbody>
+                </table>
+
+                <div id="scheduleControls" hidden style="margin-top:18px;">
+                    <button id="addScheduleBtn">+ Add Schedule Row</button>
+                </div>
+            </div>
+
+            <div class="planner-card">
+                <h3>Study Tasks</h3>
+
+                <div id="taskList">
+                    <div class="task-item">
+                        <input type="checkbox">
+                        <span>Complete Calculus exercises</span>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox">
+                        <span>Practice C programming</span>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox">
+                        <span>Revise HTML and CSS</span>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox">
+                        <span>Study Prompt Engineering</span>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox">
+                        <span>Revise Electrical concepts</span>
+                    </div>
+                </div>
+
+                <div id="taskControls" hidden style="margin-top:18px;">
+                    <button id="addTaskBtn">+ Add Task</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="saveControls" hidden style="margin-top:20px;">
+            <button id="savePlanBtn">Save My Custom Plan</button>
+            <button id="resetPlanBtn" style="margin-left:10px;">Reset Custom Plan</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>SEMESTER SYNC. | Track. Organise. Complete.</p>
+        <p>Semester 1 · Academic Year 2026-27</p>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+<script>
+(function () {
+    const defaultSchedule = [
+        ["Monday", "Calculus", "Practice"],
+        ["Tuesday", "Programming", "Coding"],
+        ["Wednesday", "Web Designing", "Revision"],
+        ["Thursday", "Generative AI", "Learning"],
+        ["Friday", "Electrical", "Practice"],
+        ["Saturday", "All Subjects", "Revision"]
+    ];
+
+    const defaultTasks = [
+        "Complete Calculus exercises",
+        "Practice C programming",
+        "Revise HTML and CSS",
+        "Study Prompt Engineering",
+        "Revise Electrical concepts"
+    ];
+
+    const storageKey = "backlogZeroCustomPlan";
+
+    const scheduleBody = document.getElementById("scheduleBody");
+    const taskList = document.getElementById("taskList");
+
+    const readyBtn = document.getElementById("readyPlanBtn");
+    const customBtn = document.getElementById("customPlanBtn");
+    const message = document.getElementById("planMessage");
+
+    const scheduleControls = document.getElementById("scheduleControls");
+    const taskControls = document.getElementById("taskControls");
+    const saveControls = document.getElementById("saveControls");
+
+    let customMode = false;
+
+    function makeCell(value) {
+        const td = document.createElement("td");
+        td.textContent = value;
+        return td;
+    }
+
+    function renderSchedule(rows) {
+        scheduleBody.innerHTML = "";
+
+        rows.forEach(row => {
+            const tr = document.createElement("tr");
+
+            row.forEach(value => tr.appendChild(makeCell(value)));
+
+            const actionCell = makeCell("");
+            actionCell.className = "custom-only";
+            actionCell.hidden = !customMode;
+
+            if (customMode) {
+                const removeBtn = document.createElement("button");
+                removeBtn.textContent = "Delete";
+                removeBtn.addEventListener("click", () => {
+                    tr.remove();
+                });
+                actionCell.appendChild(removeBtn);
+            }
+
+            tr.appendChild(actionCell);
+            scheduleBody.appendChild(tr);
+        });
+    }
+
+    function renderTasks(tasks) {
+        taskList.innerHTML = "";
+
+        tasks.forEach(task => {
+            const item = document.createElement("div");
+            item.className = "task-item";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = !!task.done;
+
+            const span = document.createElement("span");
+            span.textContent = task.name;
+
+            item.appendChild(checkbox);
+            item.appendChild(span);
+
+            if (customMode) {
+                span.contentEditable = "true";
+
+                const removeBtn = document.createElement("button");
+                removeBtn.textContent = "Delete";
+                removeBtn.addEventListener("click", () => item.remove());
+
+                item.appendChild(removeBtn);
+            }
+
+            taskList.appendChild(item);
+        });
+    }
+
+    function getSchedule() {
+        return Array.from(scheduleBody.querySelectorAll("tr")).map(row =>
+            Array.from(row.querySelectorAll("td"))
+                .slice(0, 3)
+                .map(cell => cell.textContent.trim())
+        );
+    }
+
+    function getTasks() {
+        return Array.from(taskList.querySelectorAll(".task-item")).map(item => ({
+            name: item.querySelector("span").textContent.trim(),
+            done: item.querySelector("input").checked
+        })).filter(task => task.name);
+    }
+
+    function showReadyPlan() {
+        customMode = false;
+
+        renderSchedule(defaultSchedule);
+        renderTasks(defaultTasks.map(name => ({ name, done: false })));
+
+        scheduleControls.hidden = true;
+        taskControls.hidden = true;
+        saveControls.hidden = true;
+
+        readyBtn.classList.add("active");
+        customBtn.classList.remove("active");
+
+        message.textContent = "You're viewing the original recommended schedule.";
+    }
+
+    function showCustomPlan() {
+        customMode = true;
+
+        const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+
+        const schedule = saved?.schedule || defaultSchedule;
+        const tasks = saved?.tasks || defaultTasks.map(name => ({ name, done: false }));
+
+        renderSchedule(schedule);
+        renderTasks(tasks);
+
+        scheduleBody.querySelectorAll("tr").forEach(row => {
+            row.querySelectorAll("td").forEach((cell, index) => {
+                if (index < 3) cell.contentEditable = "true";
+            });
+        });
+
+        scheduleControls.hidden = false;
+        taskControls.hidden = false;
+        saveControls.hidden = false;
+
+        readyBtn.classList.remove("active");
+        customBtn.classList.add("active");
+
+        message.textContent = "Custom mode: edit your schedule and tasks, then save your changes.";
+    }
+
+    readyBtn.addEventListener("click", showReadyPlan);
+    customBtn.addEventListener("click", showCustomPlan);
+
+    document.getElementById("addScheduleBtn").addEventListener("click", () => {
+        const tr = document.createElement("tr");
+
+        ["New Day", "New Subject", "New Activity"].forEach(value => {
+            const td = makeCell(value);
+            td.contentEditable = "true";
+            tr.appendChild(td);
+        });
+
+        const actionCell = makeCell("");
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Delete";
+        removeBtn.addEventListener("click", () => tr.remove());
+        actionCell.appendChild(removeBtn);
+
+        tr.appendChild(actionCell);
+        scheduleBody.appendChild(tr);
+    });
+
+    document.getElementById("addTaskBtn").addEventListener("click", () => {
+        const item = document.createElement("div");
+        item.className = "task-item";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+
+        const span = document.createElement("span");
+        span.textContent = "New task";
+        span.contentEditable = "true";
+
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Delete";
+        removeBtn.addEventListener("click", () => item.remove());
+
+        item.append(checkbox, span, removeBtn);
+        taskList.appendChild(item);
+    });
+
+    document.getElementById("savePlanBtn").addEventListener("click", () => {
+        const customPlan = {
+            schedule: getSchedule(),
+            tasks: getTasks()
+        };
+
+        localStorage.setItem(storageKey, JSON.stringify(customPlan));
+        message.textContent = "Your custom plan has been saved!";
+    });
+
+    document.getElementById("resetPlanBtn").addEventListener("click", () => {
+        localStorage.removeItem(storageKey);
+        showCustomPlan();
+        message.textContent = "Custom plan reset to the recommended schedule. Save if you want to keep it.";
+    });
+
+    showReadyPlan();
+})();
+</script>
+
+</body>
+</html>

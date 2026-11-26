@@ -1,0 +1,1539 @@
+
+/* ===== GLOBAL SETTINGS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d18;
+    color: #ffffff;
+    display: flex;
+}
+
+
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #151525;
+    padding: 30px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #292940;
+}
+
+.logo h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #9b7cff;
+}
+
+.logo p {
+    color: #77778f;
+    font-size: 10px;
+    margin-top: 6px;
+    letter-spacing: 2px;
+}
+
+.sidebar nav {
+    margin-top: 55px;
+    flex: 1;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #aaaabd;
+    padding: 13px 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #292444;
+    color: #b9a2ff;
+}
+
+.sidebar-footer {
+    color: #77778f;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ===== MAIN CONTENT ===== */
+
+
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===== TOPBAR ===== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.welcome-text {
+    color: #9b7cff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+}
+
+.profile {
+    background-color: #1c1c30;
+    border: 1px solid #30304a;
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: #c5b5ff;
+    font-size: 13px;
+}
+
+
+/* ===== INTRODUCTION ===== */
+
+.intro {
+    background: linear-gradient(120deg, #282044, #17172b);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #383052;
+}
+
+.intro h2 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #aaaabd;
+    font-size: 14px;
+}
+
+
+/* ===== STATISTICS ===== */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.stat-card {
+    background-color: #171727;
+    border: 1px solid #292940;
+    padding: 22px;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #8065d8;
+}
+
+.stat-card h3 {
+    color: #c0bfd2;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 15px 0 8px;
+    color: #b9a2ff;
+}
+
+.stat-card span {
+    color: #77778f;
+    font-size: 14px;
+}
+
+
+/* ===== SECTION HEADINGS ===== */
+
+.content-section {
+    margin-bottom: 45px;
+    scroll-margin-top: 25px;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #88889f;
+    font-size: 13px;
+}
+
+
+/* ===== SUBJECT CARDS ===== */
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.subject-card {
+    background-color: #171727;
+    padding: 25px;
+    border: 1px solid #292940;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+    border-color: #8065d8;
+}
+
+.subject-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.subject-card p {
+    color: #88889f;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+.subject-card span {
+    display: block;
+    color: #aaaabd;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+
+/* ===== PROGRESS BARS ===== */
+
+.progress-bar {
+    height: 7px;
+    background-color: #303047;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.web-progress {
+    width: 40%;
+    background-color: #9b7cff;
+}
+
+.programming-progress {
+    width: 30%;
+    background-color: #52c7a5;
+}
+
+.ai-progress {
+    width: 25%;
+    background-color: #e5a84f;
+}
+
+.calculus-progress {
+    width: 20%;
+    background-color: #579ce8;
+}
+
+.electrical-progress {
+    width: 15%;
+    background-color: #e77d91;
+}
+
+
+/* ===== PLACEHOLDER SECTIONS ===== */
+
+.placeholder-card {
+    background-color: #171727;
+    border: 1px solid #292940;
+    padding: 30px;
+    border-radius: 13px;
+}
+
+.placeholder-card h3 {
+    margin-bottom: 10px;
+}
+
+.placeholder-card p {
+    color: #88889f;
+    font-size: 13px;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    border-top: 1px solid #292940;
+    padding-top: 22px;
+    color: #77778f;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1100px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sidebar nav {
+        margin-top: 20px;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar li {
+        margin: 0;
+    }
+
+    .sidebar a {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar h1 {
+        font-size: 24px;
+    }
+
+    .profile {
+        display: none;
+    }
+
+}
+
+
+/* ===== CHAPTER TRACKER ===== */
+
+.tracker-subject {
+    background-color: #171727;
+    border: 1px solid #292940;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 22px;
+}
+
+.tracker-subject h3 {
+    color: #b9a2ff;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+
+.tracker-subject details {
+    background-color: #202035;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.tracker-subject summary {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.tracker-subject details[open] summary {
+    color: #b9a2ff;
+    margin-bottom: 15px;
+}
+
+/* Smooth topic reveal */
+.tracker-subject details > label {
+    animation: topicReveal 0.35s ease both;
+}
+
+@keyframes topicReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tracker-subject label {
+    display: block;
+    color: #aaaabd;
+    font-size: 13px;
+    padding: 9px 5px;
+    cursor: pointer;
+}
+
+.tracker-subject input[type="checkbox"] {
+    accent-color: #9b7cff;
+    margin-right: 9px;
+}
+
+
+/* ===== NOTES LIBRARY ===== */
+
+.notes-search {
+    margin-bottom: 25px;
+}
+
+.notes-search input {
+    width: 100%;
+    padding: 15px;
+    background-color: #171727;
+    border: 1px solid #30304a;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    font-size: 13px;
+}
+
+.notes-search input:focus {
+    border-color: #9b7cff;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.note-card {
+    background-color: #171727;
+    border: 1px solid #292940;
+    border-radius: 13px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.note-card:hover {
+    transform: translateY(-4px);
+    border-color: #8065d8;
+}
+
+.note-category {
+    color: #a78bfa;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.note-card h3 {
+    margin: 15px 0 10px;
+    font-size: 17px;
+}
+
+.note-card p {
+    color: #9292a8;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.note-card a {
+    color: #b9a2ff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.note-card a:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== FLASHCARDS ===== */
+
+.flashcards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.flashcard {
+    background: linear-gradient(145deg, #1d1b32, #171727);
+    border: 1px solid #302b49;
+    border-radius: 14px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.flashcard:hover {
+    transform: translateY(-4px);
+    border-color: #9b7cff;
+}
+
+.flashcard span {
+    color: #a78bfa;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.flashcard h3 {
+    font-size: 17px;
+    margin: 20px 0;
+}
+
+.flashcard details {
+    border-top: 1px solid #30304a;
+    padding-top: 15px;
+}
+
+.flashcard summary {
+    color: #b9a2ff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.flashcard details p {
+    color: #aaaabd;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .flashcards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== STUDY PLANNER ===== */
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.planner-card {
+    background-color: #171727;
+    border: 1px solid #292940;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.planner-card h3 {
+    margin-bottom: 22px;
+    font-size: 17px;
+}
+
+/* TIMETABLE */
+
+.planner-card table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.planner-card th {
+    color: #b9a2ff;
+    font-size: 12px;
+    padding: 12px 8px;
+    border-bottom: 1px solid #383850;
+}
+
+.planner-card td {
+    color: #aaaabd;
+    font-size: 12px;
+    padding: 14px 8px;
+    border-bottom: 1px solid #292940;
+}
+
+.planner-card tr:hover {
+    background-color: #222239;
+}
+
+/* TASK LIST */
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 5px;
+    border-bottom: 1px solid #292940;
+    color: #aaaabd;
+    font-size: 13px;
+}
+
+.task-item input {
+    accent-color: #9b7cff;
+    width: 16px;
+    height: 16px;
+}
+
+.task-item input:checked + span {
+    text-decoration: line-through;
+    color: #77778f;
+}
+
+@media (max-width: 900px) {
+    .planner-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* SUBJECT PAGE LINKS */
+
+.subject-card a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #b9a2ff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.subject-card a:hover {
+    color: white;
+}
+
+/* NOTES RESOURCE LIST */
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.resource-list a,
+.resource-list span {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 9px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    background: rgba(155, 124, 255, 0.07);
+    border: 1px solid rgba(155, 124, 255, 0.12);
+    color: #c8b8ff;
+    transition: all 0.25s ease;
+}
+
+.resource-list a:hover {
+    background: rgba(155, 124, 255, 0.16);
+    border-color: #9b7cff;
+    transform: translateX(5px);
+    color: #ffffff;
+}
+
+.resource-list span {
+    color: #9292a8;
+    cursor: default;
+}
+
+.resource-list a::after {
+    content: "↗";
+    margin-left: auto;
+    padding-left: 10px;
+    color: #9b7cff;
+}
+
+.note-card {
+    min-width: 0;
+}
+
+.notes-grid {
+    align-items: stretch;
+}
+
+
+/* SEMESTER SYNC - GLOBAL ANIMATIONS */
+
+/* Smooth page appearance */
+body {
+    animation: pageFade 0.45s ease;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card hover animation */
+.subject-card,
+.note-card,
+.tracker-subject,
+.stat-card,
+.planner-card,
+.flashcard {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.subject-card:hover,
+.note-card:hover,
+.stat-card:hover,
+.planner-card:hover,
+.flashcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    border-color: #9b7cff;
+}
+
+/* Smooth progress bar animation */
+.progress {
+    transition: width 0.8s ease;
+}
+
+/* Smooth navigation hover */
+.sidebar a {
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                padding-left 0.25s ease;
+}
+
+.sidebar a:hover {
+    padding-left: 22px;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =================================
+   SEMESTER SYNC - PREMIUM ANIMATIONS
+================================= */
+
+/* 1. AMBIENT BACKGROUND GLOW */
+
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -180px;
+    left: 25%;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(
+        circle,
+        rgba(155, 124, 255, 0.12),
+        transparent 70%
+    );
+    filter: blur(45px);
+    pointer-events: none;
+    z-index: -1;
+    animation: ambientGlow 9s ease-in-out infinite alternate;
+}
+
+@keyframes ambientGlow {
+    from {
+        transform: translate(0, 0) scale(0.9);
+        opacity: 0.55;
+    }
+    to {
+        transform: translate(100px, 80px) scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* 2. ANIMATED STATISTICS */
+
+.stat-number {
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
+}
+
+/* 3. SMOOTH CHAPTER EXPANSION */
+
+.tracker-subject details {
+    overflow: hidden;
+}
+
+.tracker-subject details summary {
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.tracker-subject details summary:hover {
+    color: #b69aff;
+}
+
+.tracker-subject details[open] {
+    animation: chapterOpen 0.3s ease;
+}
+
+@keyframes chapterOpen {
+    from {
+        opacity: 0.65;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 4. CIRCULAR PROGRESS RING */
+.progress-ring {
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.progress-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+.progress-ring .ring-bg {
+    stroke: #29263d;
+}
+
+.progress-ring .ring-fill {
+    stroke: #9b7cff;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1.2s ease;
+}
+
+.progress-ring .ring-text {
+    position: absolute;
+    font-size: 26px;
+    font-weight: 700;
+    color: #b69aff;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+    }
+
+    .tracker-subject details[open] {
+        animation: none;
+    }
+
+    .progress-ring .ring-fill {
+        transition: none;
+    }
+}
+
+
+/* FINAL COMPACT PROGRESS RING */
+
+.stats-container {
+    align-items: stretch;
+}
+
+.stat-card {
+    min-height: 165px;
+    height: auto;
+}
+
+.stat-ring-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    height: 100%;
+}
+
+.stat-ring-layout > div:first-child {
+    min-width: 0;
+}
+
+.progress-ring {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin: 0;
+}
+
+.progress-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 9;
+}
+
+.progress-ring .ring-bg {
+    stroke: #29263d;
+}
+
+.progress-ring .ring-fill {
+    stroke: #9b7cff;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1.2s ease;
+}
+
+.progress-ring .ring-text {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 700;
+    color: #b69aff;
+}
+
+
+/* OVERALL PROGRESS RING - CLEAN VERSION */
+
+.overall-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    min-height: 165px;
+}
+
+.overall-card h3 {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.overall-card .progress-ring {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin: 8px auto;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.overall-card .progress-ring svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.overall-card .ring-text {
+    position: absolute;
+    font-size: 22px;
+    font-weight: 700;
+    color: #b69aff;
+}
+
+.overall-card > span {
+    color: #85859d;
+    font-size: 13px;
+}
+
+
+
+/* CURSOR FOLLOWING GLOW */
+
+
+.cursor-glow {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(155, 124, 255, 0.32) 0%,
+        rgba(155, 124, 255, 0.16) 35%,
+        rgba(155, 124, 255, 0.05) 60%,
+        transparent 75%
+    );
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+/* Keep website content above the glow */
+.sidebar,
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+    .cursor-glow {
+        display: none;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+/* HORIZONTAL THEME SWITCHER */
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: auto;
+    padding: 14px 4px;
+    border-top: 1px solid #292940;
+}
+
+.theme-icon {
+    font-size: 23px;
+    color: #aaaabd;
+}
+
+.theme-label {
+    color: #d0d0df;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.theme-options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.theme-btn {
+    width: 23px;
+    height: 23px;
+    min-width: 23px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #454554;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.theme-btn[data-theme="current"] {
+    background: linear-gradient(90deg, #151525 50%, #eeeeF5 50%);
+}
+
+.theme-btn[data-theme="dark"] {
+    background: #080a12;
+}
+
+.theme-btn[data-theme="light"] {
+    background: #f5f5fa;
+}
+
+.theme-btn.active {
+    outline: 2px solid #9b7cff;
+    outline-offset: 3px;
+}
+
+.theme-btn:hover {
+    transform: scale(1.12);
+}
+
+
+/* DARK THEME */
+
+
+/* DEEP DARK THEME */
+
+body[data-theme="dark"] {
+    background: #070910;
+    color: #e8edf8;
+}
+
+body[data-theme="dark"] .sidebar {
+    background: #0b101c;
+    border-color: #1d2b42;
+}
+
+body[data-theme="dark"] .stat-card,
+body[data-theme="dark"] .subject-card,
+body[data-theme="dark"] .note-card,
+body[data-theme="dark"] .planner-card,
+body[data-theme="dark"] .tracker-subject,
+body[data-theme="dark"] .flashcard {
+    background: #101827;
+    border-color: #20334e;
+}
+
+body[data-theme="dark"] .sidebar a {
+    color: #a8b6ca;
+}
+
+body[data-theme="dark"] .sidebar a:hover,
+body[data-theme="dark"] .sidebar a.active {
+    background: #172941;
+    color: #65b5ff;
+}
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3 {
+    color: #edf4ff;
+}
+
+body[data-theme="dark"] p,
+body[data-theme="dark"] span,
+body[data-theme="dark"] .sidebar-footer {
+    color: #91a2bb;
+}
+
+body[data-theme="dark"] .logo span,
+body[data-theme="dark"] a {
+    color: #65b5ff;
+}
+
+body[data-theme="dark"] .theme-btn.active {
+    outline-color: #65b5ff;
+}
+
+body[data-theme="dark"] .progress-ring .ring-fill {
+    stroke: #65b5ff;
+}
+
+body[data-theme="dark"] .progress-ring .ring-text {
+    color: #65b5ff;
+}
+
+body[data-theme="dark"] .cursor-glow {
+    background: radial-gradient(
+        circle,
+        rgba(65, 150, 255, 0.28),
+        rgba(65, 150, 255, 0.08) 40%,
+        transparent 75%
+    );
+}
+
+
+/* LIGHT THEME */
+
+body[data-theme="light"] {
+    background: #f4f3fa;
+    color: #252238;
+}
+
+body[data-theme="light"] .sidebar,
+body[data-theme="light"] .stat-card,
+body[data-theme="light"] .subject-card,
+body[data-theme="light"] .note-card,
+body[data-theme="light"] .planner-card,
+body[data-theme="light"] .tracker-subject,
+body[data-theme="light"] .flashcard {
+    background-color: #ffffff;
+    border-color: #dedbea;
+}
+
+body[data-theme="light"] .sidebar a {
+    color: #55516a;
+}
+
+body[data-theme="light"] .sidebar a:hover,
+body[data-theme="light"] .sidebar a.active {
+    background-color: #eee9ff;
+    color: #704bc4;
+}
+
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] .logo h2 {
+    color: #252238;
+}
+
+body[data-theme="light"] p,
+body[data-theme="light"] span,
+body[data-theme="light"] .sidebar-footer {
+    color: #69657b;
+}
+
+body[data-theme="light"] .theme-btn.active {
+    outline-color: #704bc4;
+}
+
+body[data-theme="light"] input,
+body[data-theme="light"] textarea,
+body[data-theme="light"] select {
+    background: #fff;
+    color: #252238;
+    border-color: #dedbea;
+}
+
+
+/* ===== SEMESTER SYNC LIGHT THEME FIX ===== */
+
+body[data-theme="light"] {
+    background: #f4f2fa;
+    color: #27243b;
+}
+
+/* Main headings and text */
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] p {
+    color: #27243b;
+}
+
+/* Welcome banner */
+body[data-theme="light"] .intro {
+    background: linear-gradient(120deg, #e8ddff, #f1eaff);
+    border: 1px solid #ded0ff;
+}
+
+body[data-theme="light"] .intro h2,
+body[data-theme="light"] .intro p {
+    color: #27243b;
+}
+
+/* Cards */
+body[data-theme="light"] .stat-card,
+body[data-theme="light"] .subject-card,
+body[data-theme="light"] .note-card,
+body[data-theme="light"] .tracker-subject,
+body[data-theme="light"] .planner-card {
+    background: #ffffff;
+    border-color: #dedbea;
+    color: #27243b;
+}
+
+/* Chapter tracker */
+body[data-theme="light"] .tracker-subject details summary {
+    background: #eee9fa;
+    color: #30294b;
+}
+
+body[data-theme="light"] .tracker-subject details summary:hover {
+    background: #e4dcf8;
+}
+
+/* Notes and resource links */
+body[data-theme="light"] .note-card a,
+body[data-theme="light"] .subject-card a {
+    color: #7048d8;
+}
+
+body[data-theme="light"] .note-card a:hover,
+body[data-theme="light"] .subject-card a:hover {
+    color: #512bb5;
+}
+
+/* Flashcards */
+body[data-theme="light"] .flashcard {
+    background: #ffffff;
+    border: 1px solid #dedbea;
+    color: #27243b;
+}
+
+body[data-theme="light"] .flashcard h3,
+body[data-theme="light"] .flashcard summary,
+body[data-theme="light"] .flashcard p {
+    color: #30294b;
+}
+
+/* Study planner */
+body[data-theme="light"] .planner-card table th {
+    color: #7048d8;
+}
+
+body[data-theme="light"] .planner-card table td {
+    color: #625e75;
+}
+
+body[data-theme="light"] .planner-card table th,
+body[data-theme="light"] .planner-card table td {
+    border-color: #dedbea;
+}
+
+/* Inputs */
+body[data-theme="light"] input,
+body[data-theme="light"] textarea,
+body[data-theme="light"] select {
+    background: #ffffff;
+    color: #27243b;
+    border-color: #dedbea;
+}
+
+body[data-theme="light"] input::placeholder {
+    color: #89849b;
+}
+
+
+/* ===== DASHBOARD FINAL POLISH ===== */
+
+.stats-container {
+    gap: 18px;
+}
+
+.stat-card {
+    min-height: 190px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+}
+
+.stat-card h3 {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.stat-card .stat-number {
+    font-size: 42px;
+}
+
+.stat-card span {
+    font-size: 13px;
+}
+
+.overall-card {
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.overall-card .progress-ring {
+    width: 135px !important;
+    height: 135px !important;
+}
+
+/* More breathing room before subjects */
+#subjects {
+    margin-top: 48px;
+}
+
+
+.stat-card {
+    gap: 8px;
+}
+
+.stat-card .stat-number {
+    margin: 8px 0 0;
+}
+
+.stat-card span {
+    margin-top: 0;
+}
+/* ===== SUBJECT CARD FINISHING TOUCH ===== */
+
+.subject-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-6px);
+    border-color: #9b7cff;
+    box-shadow: 0 10px 30px rgba(155, 124, 255, 0.12);
+}
+
+.subject-card h3 {
+    margin-bottom: 12px;
+}
+
+.subject-card p {
+    line-height: 1.6;
+}
+
+
+/* COMPLETED TOPIC ANIMATION */
+
+.tracker-subject label {
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.tracker-subject label:has(input[type="checkbox"]:checked) {
+    color: #b9a2ff;
+    opacity: 0.8;
+}
+
+.tracker-subject input[type="checkbox"] {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tracker-subject input[type="checkbox"]:checked {
+    transform: scale(1.15);
+}
+
+
+/* SUBJECT COMPLETION COUNTS */
+
+.subject-completion-count {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #292444;
+    color: #b9a2ff;
+    font-size: 12px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+/* PLANNER BUTTON STYLING */
+
+.planner-card button,
+#saveControls button,
+#scheduleControls button,
+#taskControls button {
+    background: rgba(139, 92, 246, 0.15);
+    color: #b9a0ff;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.planner-card button:hover,
+#saveControls button:hover,
+#scheduleControls button:hover,
+#taskControls button:hover {
+    background: #8b5cf6;
+    color: white;
+    transform: translateY(-2px);
+}

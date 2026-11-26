@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Library | SemesterSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>SEMESTER<span>SYNC.</span></h2>
+            <p>ACADEMIC TRACKER</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="subjects.html">My Subjects</a></li>
+                <li><a href="chapters.html">Chapter Tracker</a></li>
+                <li><a href="notes.html" class="active">Notes Library</a></li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="planner.html">Study Planner</a></li>
+            </ul>
+        </nav>
+
+
+<div class="theme-switcher">
+    <span class="theme-icon">◐</span>
+    <span class="theme-label">Theme</span>
+
+    <div class="theme-options">
+        <button class="theme-btn active" data-theme="current" title="Current theme" aria-label="Current theme"></button>
+        <button class="theme-btn" data-theme="dark" title="Dark theme" aria-label="Dark theme"></button>
+        <button class="theme-btn" data-theme="light" title="Light theme" aria-label="Light theme"></button>
+    </div>
+</div>
+
+        <div class="sidebar-footer">
+            <p>SEMESTER 01</p>
+            <p>Academic Year 2026-27</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome-text">YOUR ACADEMIC COMMAND CENTRE</p>
+                <h1>Notes Library</h1>
+            </div>
+            <div class="profile">Semester 01</div>
+        </header>
+
+        <!-- NOTES LIBRARY -->
+        <section id="notes" class="content-section">
+
+            <div class="section-heading">
+                <h2>Your Study Materials</h2>
+                <p>Keep all your academic resources organised.</p>
+            </div>
+
+            <div class="notes-search">
+    <input type="text" id="notesSearch" placeholder="Search your notes...">
+</div>
+            
+<div class="notes-grid">
+
+    <!-- WEB DESIGNING -->
+    <article class="note-card">
+        <span class="note-category">WEB DESIGNING</span>
+        <h3>Web Designing</h3>
+        <p>HTML, CSS and Web Development Study Material</p>
+
+        <div class="resource-list">
+            <a href="https://docs.google.com/presentation/d/1zxBlVSMAyaMOHz-mLBrbWWizdMY8mR15/edit" target="_blank">Unit 1 – Introduction to HTML & CSS ↗</a>
+            <a href="https://docs.google.com/presentation/d/16mu2nurg3JRB8F7oSbK4LecRMweFekRi/edit" target="_blank">Unit 2 – HTML Elements & Forms ↗</a>
+            <a href="https://docs.google.com/presentation/d/1ZxdrFzBrbaHCqKjd1yk6iaRMpnNyHwIU/edit" target="_blank">Unit 3 – CSS Basics & Styling ↗</a>
+            <a href="https://docs.google.com/presentation/d/11YjoAWwzgzc0T6BJI8nFqAJtUl37lzgh/edit" target="_blank">Unit 4 – Responsive Web Design ↗</a>
+            <a href="https://docs.google.com/presentation/d/14rRKjkGiYwpO4kgV893MZw7aVBtAPQOi/edit" target="_blank">Unit 5 – Web Deployment ↗</a>
+        </div>
+    </article>
+
+    <!-- PROGRAMMING -->
+    <article class="note-card">
+        <span class="note-category">PROGRAMMING</span>
+        <h3>Programming for Problem Solving</h3>
+        <p>C Programming Study Material</p>
+
+        <div class="resource-list">
+            <a href="https://drive.google.com/file/d/1DrjB8TxjPS-Mdy7WkSV4y55imci3ps3T/view" target="_blank">Unit 1 – Introduction to C ↗</a>
+            <a href="https://docs.google.com/presentation/d/1c-WnPz-x7UCyLD6UlEtLww18dhzMHbXP/edit" target="_blank">Unit 2 – Variables, Data Types & Operators ↗</a>
+            <a href="https://docs.google.com/presentation/d/1QwRA0sOg3u5VxR1IDeLf-aY2r6ToQCy9/edit" target="_blank">Unit 3 – Control Structures ↗</a>
+            <a href="https://docs.google.com/presentation/d/17JESxstJ7W6M8Imw8_BLs8lpJx7YBXsJ/edit" target="_blank">Unit 4 – Arrays & Strings ↗</a>
+            <a href="https://docs.google.com/presentation/d/1SLEMMRRaFG8HQUE60thxrzK_EL7Ih0hz/edit" target="_blank">Unit 5 – Functions, Structures & Unions ↗</a>
+            <a href="https://docs.google.com/presentation/d/1xZV6mHJC-z5WiPS3_c1QzfVFxYSqrhW3/edit" target="_blank">Unit 6 – Pointers & File Management ↗</a>
+        </div>
+    </article>
+
+    <!-- PROMPT ENGINEERING -->
+    <article class="note-card">
+        <span class="note-category">GENERATIVE AI</span>
+        <h3>Prompt Engineering and Generative AI</h3>
+        <p>Prompt Engineering Course Resources</p>
+
+        <div class="resource-list">
+            <a href="https://drnitinmishra10.github.io/pe/" target="_blank">Open Course Website ↗</a>
+            <span>Module 1 – Introduction to LLMs and Prompt Engineering</span>
+            <span>Module 2 – Fundamentals of Prompt Writing</span>
+            <span>Module 3 – Prompt Engineering Techniques</span>
+            <span>Module 4 – Advanced Prompting Techniques</span>
+            <span>Module 5 – AI Productivity Tools & Multimodal Prompting</span>
+            <span>Module 6 – Mini Project & Demonstration</span>
+        </div>
+    </article>
+
+    <!-- CALCULUS -->
+    <article class="note-card">
+        <span class="note-category">MATHEMATICS</span>
+        <h3>Calculus</h3>
+        <p>Calculus Study Material</p>
+
+        <div class="resource-list">
+            <a href="https://drive.google.com/file/d/1iTjh7ytsCdwE5nOLd2mNyu_b2gb_eUTh/view" target="_blank">Unit 1 – Applications of Functions ↗</a>
+            <a href="https://drive.google.com/file/d/1RnzO0MDD_BRP2NisGXVrotfVB0C9qhJU/view" target="_blank">Unit 2 – Multivariate Calculus ↗</a>
+            <a href="https://drive.google.com/file/d/1A6RHgNBsBIc3buonKjtwT3BTB9B68P4M/view" target="_blank">Unit 3 – Multiple Integration ↗</a>
+            <span>Unit 4 – Vector Calculus</span>
+        </div>
+    </article>
+
+    <!-- EEE -->
+    <article class="note-card">
+        <span class="note-category">ELECTRICAL ENGINEERING</span>
+        <h3>Electrical and Electronics Engineering</h3>
+        <p>EEE Study Material</p>
+
+        <div class="resource-list">
+            <a href="https://drive.google.com/file/d/1yPZpnbzvg7tmmBwjCgm2qUG8U3THo13G/view" target="_blank">Unit 1 – DC Circuits ↗</a>
+            <a href="https://drive.google.com/file/d/1qO1PHQc-ZyVkRp3ycufBbofqlxCqa57w/view" target="_blank">Unit 2 – AC Circuits ↗</a>
+            <span>Unit 3 – Diodes and Transistors</span>
+            <span>Unit 4 – Voltage Regulators</span>
+        </div>
+    </article>
+
+</div>
+
+
+        </section>
+
+        <footer>
+            <p>SEMESTER SYNC. | Track. Organise. Complete.</p>
+            <p>Semester 1 · Academic Year 2026-27</p>
+        </footer>
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>

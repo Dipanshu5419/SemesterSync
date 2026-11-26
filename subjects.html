@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Subjects | SemesterSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>SEMESTER<span>SYNC.</span></h2>
+            <p>ACADEMIC TRACKER</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="subjects.html" class="active">My Subjects</a></li>
+                <li><a href="chapters.html">Chapter Tracker</a></li>
+                <li><a href="notes.html">Notes Library</a></li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="planner.html">Study Planner</a></li>
+            </ul>
+        </nav>
+
+
+<div class="theme-switcher">
+    <span class="theme-icon">◐</span>
+    <span class="theme-label">Theme</span>
+
+    <div class="theme-options">
+        <button class="theme-btn active" data-theme="current" title="Current theme" aria-label="Current theme"></button>
+        <button class="theme-btn" data-theme="dark" title="Dark theme" aria-label="Dark theme"></button>
+        <button class="theme-btn" data-theme="light" title="Light theme" aria-label="Light theme"></button>
+    </div>
+</div>
+
+        <div class="sidebar-footer">
+            <p>SEMESTER 01</p>
+            <p>Academic Year 2026-27</p>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome-text">YOUR ACADEMIC COMMAND CENTRE</p>
+                <h1>My Subjects</h1>
+            </div>
+
+            <div class="profile">
+                Semester 01
+            </div>
+        </header>
+
+
+        <section class="content-section">
+
+            <div class="section-heading">
+                <h2>Your Semester Subjects</h2>
+                <p>Manage and monitor all five academic subjects.</p>
+            </div>
+
+            <div class="subjects-grid">
+
+                <article class="subject-card">
+                    <h3>01. Web Designing</h3>
+                    <p>HTML, CSS and Web Development</p>
+                    <div class="progress-bar">
+                        <div class="progress web-progress"></div>
+                    </div>
+                    <span>40% Completed</span>
+                    <a href="chapters.html">View Chapters →</a>
+                </article>
+
+                <article class="subject-card">
+                    <h3>02. Programming for Problem Solving</h3>
+                    <p>C Programming and Logic Building</p>
+                    <div class="progress-bar">
+                        <div class="progress programming-progress"></div>
+                    </div>
+                    <span>30% Completed</span>
+                    <a href="chapters.html">View Chapters →</a>
+                </article>
+
+                <article class="subject-card">
+                    <h3>03. Prompt Engineering & Generative AI</h3>
+                    <p>LLMs and Prompting Techniques</p>
+                    <div class="progress-bar">
+                        <div class="progress ai-progress"></div>
+                    </div>
+                    <span>25% Completed</span>
+                    <a href="chapters.html">View Chapters →</a>
+                </article>
+
+                <article class="subject-card">
+                    <h3>04. Calculus</h3>
+                    <p>Functions, Integration and Vector Calculus</p>
+                    <div class="progress-bar">
+                        <div class="progress calculus-progress"></div>
+                    </div>
+                    <span>20% Completed</span>
+                    <a href="chapters.html">View Chapters →</a>
+                </article>
+
+                <article class="subject-card">
+                    <h3>05. Electrical & Electronics Engineering</h3>
+                    <p>Electrical Circuits and Electronics</p>
+                    <div class="progress-bar">
+                        <div class="progress electrical-progress"></div>
+                    </div>
+                    <span>15% Completed</span>
+                    <a href="chapters.html">View Chapters →</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>SEMESTER SYNC. | Track. Organise. Complete.</p>
+            <p>Semester 1 · Academic Year 2026-27</p>
+        </footer>
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
